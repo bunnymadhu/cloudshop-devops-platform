@@ -20,4 +20,4 @@ This server is used as the primary lab environment for building the CloudShop Pr
 
 ## Last Updated
 
-Day 2
+Day 2(01-07-2026)
