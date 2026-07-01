@@ -1,8 +1,11 @@
 # Project Progress
 
-| Day | Status |
-|------|--------|
-| Day 1 | ✅ Completed |
+## Progress
+
+| Day | Topic | Status |
+|------|-------|--------|
+| Day 1 | Project Initialization | ✅ |
+| Day 2 | Linux Foundation & Documentation | 🚧 |
 
 ---
 
