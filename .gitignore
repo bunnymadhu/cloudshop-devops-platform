@@ -1,0 +1,32 @@
+# Internal documentation
+docs/internal/
+
+# Operating System
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment files
+.env
+.env.*
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+
+# IDE
+.vscode/
+.idea/
+
+# Node.js
+node_modules/
+
+# Python
+__pycache__/
+
+# Temporary files
+tmp/
+temp/
