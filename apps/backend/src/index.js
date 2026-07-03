@@ -4,6 +4,18 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 
+console.log("Application Configuration");
+
+console.log("PORT:", process.env.PORT);
+
+console.log("MYSQL HOST:", process.env.MYSQL_HOST);
+
+console.log("MYSQL PORT:", process.env.MYSQL_PORT);
+
+console.log("REDIS HOST:", process.env.REDIS_HOST);
+
+console.log("REDIS PORT:", process.env.REDIS_PORT);
+
 app.get("/", (req, res) => {
     res.json({
         project: "CloudShop",
