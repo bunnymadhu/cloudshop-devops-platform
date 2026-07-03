@@ -14,7 +14,7 @@ Why use .dockerignore
 4. What is the difference between the `EXPOSE` instruction in a Dockerfile and port mapping (`-p`) in the `docker run` command?
 5. Why should a `.dockerignore` file be used, and how does it improve Docker image builds?
 
-## Docker-compose Interview Questions
+## Day-4 Docker-compose Interview Questions
 
 What is the difference between build and image in Docker Compose?
 Why do we use env_file instead of hardcoding environment variables?
@@ -23,3 +23,25 @@ Why should we use a custom Docker network?
 What is the purpose of docker compose config?
 Q) How do Docker containers communicate with each other?
 A) Containers attached to the same user-defined bridge network can communicate using Docker's built-in DNS. Instead of using IP addresses or localhost, services communicate using their Compose service names, such as mysql or redis. This avoids hardcoded IPs and allows containers to be recreated without changing application configuration.
+
+Docker Compose
+What is Docker Compose, and when would you use it?
+What is the difference between docker run and Docker Compose?
+What are the main sections of a docker-compose.yml file?
+What is the purpose of docker compose config?
+Docker Networking
+How do containers communicate with each other in Docker Compose?
+Why should services communicate using service names instead of IP addresses?
+What is the difference between the default bridge network and a user-defined bridge network?
+Docker Volumes
+What is the difference between a Docker Volume and a Bind Mount?
+Why should databases always use persistent volumes?
+Health Checks
+What is the purpose of a Docker health check?
+What is the difference between a container being "running" and "healthy"?
+MySQL & Redis
+Why is Redis used alongside MySQL in modern applications?
+What is Redis AOF (Append Only File), and why is it useful?
+Why should image versions be pinned instead of using the latest tag?
+Production Best Practices
+Why should environment variables be used instead of hardcoding configuration values?

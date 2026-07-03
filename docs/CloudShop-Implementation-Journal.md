@@ -83,6 +83,8 @@ Avoid using sudo npm install.
 Use semantic versioning for Docker images.
 Keep application configuration externalized using environment variables.
 
+==============================================================================================
+
 
 Day 4 – Multi-Container Architecture
 Objectives
@@ -93,3 +95,80 @@ Production Best Practices
 Interview Questions
 Commands Executed
 Daily Metrics
+
+## Day 4 – Multi-Container Application with Docker Compose
+
+### Objective
+
+Build a production-style multi-container application using Docker Compose by integrating the backend service with MySQL and Redis. Configure networking, persistent storage, health checks, and environment management to establish the foundation of a real-world application stack.
+
+### Activities Performed
+
+* Created a Docker Compose configuration for orchestrating multiple services.
+* Integrated the existing Backend API into Docker Compose.
+* Deployed a MySQL 8.4 database container with persistent storage.
+* Configured Redis 7 (Alpine) with Append Only File (AOF) persistence.
+* Created a dedicated Docker bridge network for secure inter-service communication.
+* Configured named Docker volumes for MySQL and Redis data persistence.
+* Implemented health checks to monitor MySQL container readiness.
+* Externalized application configuration using environment variables.
+* Validated Docker networking and service discovery.
+* Verified connectivity by successfully accessing the Backend API, MySQL database, and Redis service.
+
+### Deliverables
+
+* Docker Compose configuration
+* Backend API container
+* MySQL container
+* Redis container
+* Docker bridge network
+* Persistent Docker volumes
+* Environment configuration
+* Health check implementation
+
+### Key Learnings
+
+* Docker Compose simplifies the management of multi-container applications.
+* User-defined Docker networks enable service discovery using container names instead of IP addresses.
+* Named volumes ensure persistent data across container restarts and recreations.
+* Health checks improve application reliability by verifying service readiness.
+* Redis acts as an in-memory cache to improve application performance and reduce database load.
+* Environment variables provide a clean and maintainable approach to application configuration.
+
+### Production Best Practices
+
+* Use pinned image versions instead of the `latest` tag.
+* Separate application configuration from application code using environment variables.
+* Store database data in persistent volumes.
+* Configure health checks for stateful services.
+* Use custom bridge networks for secure inter-container communication.
+* Keep container ports independent from host ports to avoid conflicts.
+
+### Commands Executed
+
+```bash
+docker compose config
+docker compose down
+docker compose up --build -d
+docker ps -a
+docker inspect cloudshop-mysql
+docker exec -it cloudshop-mysql mysql -u root -p
+SHOW DATABASES;
+docker exec -it cloudshop-redis redis-cli
+PING
+```
+
+### Daily Metrics
+
+| Metric                |    Value |
+| --------------------- | -------: |
+| Time Spent            | ~3 Hours |
+| Docker Images         |        3 |
+| Running Containers    |        3 |
+| Docker Networks       |        1 |
+| Docker Volumes        |        2 |
+| Services Configured   |        3 |
+| Git Commits           |        1 |
+| Documentation Updated |      Yes |
+
+===================================================================================
