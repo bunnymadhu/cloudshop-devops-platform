@@ -36,7 +36,7 @@ Run
 
 ```bash
 docker run -d \
--p 3001:3001 \
+-p 3001:3000 \
 --name backend-api \
 cloudshop-backend:v1
 ```
