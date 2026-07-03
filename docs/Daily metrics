@@ -1,0 +1,26 @@
+Day 1:
+
+| Metric              | Value   |
+| ------------------- | ------- |
+| Time Spent          | 2 Hours |
+| Git Commits         | 2       |
+| Files Created       | 8       |
+| Directories Created | 15      |
+
+Day 2:
+
+| Metric              | Value |
+| ------------------- | ----- |
+| Packages Installed  | 12    |
+| Documentation Files | 4     |
+| Runbooks            | 1     |
+| ADR                 | 1     |
+
+Day 3:
+
+| Metric           | Value |
+| ---------------- | ----- |
+| Docker Images    | 1     |
+| Containers       | 1     |
+| APIs             | 2     |
+| Endpoints Tested | 2     |

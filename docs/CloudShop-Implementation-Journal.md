@@ -84,3 +84,12 @@ Use semantic versioning for Docker images.
 Keep application configuration externalized using environment variables.
 
 
+Day 4 – Multi-Container Architecture
+Objectives
+Activities
+Deliverables
+Lessons Learned
+Production Best Practices
+Interview Questions
+Commands Executed
+Daily Metrics

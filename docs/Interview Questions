@@ -1,0 +1,25 @@
+Day 3:
+
+Difference between CMD and ENTRYPOINT
+npm install vs npm ci
+Docker Image vs Container
+EXPOSE vs Port Mapping
+Why use .dockerignore
+
+## Docker Interview Questions
+
+1. What is the difference between `CMD` and `ENTRYPOINT` in a Dockerfile?
+2. What is the difference between `npm install` and `npm ci`, and why is `npm ci` preferred in production environments?
+3. What is the difference between a Docker Image and a Docker Container?
+4. What is the difference between the `EXPOSE` instruction in a Dockerfile and port mapping (`-p`) in the `docker run` command?
+5. Why should a `.dockerignore` file be used, and how does it improve Docker image builds?
+
+## Docker-compose Interview Questions
+
+What is the difference between build and image in Docker Compose?
+Why do we use env_file instead of hardcoding environment variables?
+What does restart: unless-stopped do?
+Why should we use a custom Docker network?
+What is the purpose of docker compose config?
+Q) How do Docker containers communicate with each other?
+A) Containers attached to the same user-defined bridge network can communicate using Docker's built-in DNS. Instead of using IP addresses or localhost, services communicate using their Compose service names, such as mysql or redis. This avoids hardcoded IPs and allows containers to be recreated without changing application configuration.

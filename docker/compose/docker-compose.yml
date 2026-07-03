@@ -1,0 +1,62 @@
+services:
+
+  backend:
+    container_name: cloudshop-backend
+    build:
+      context: ../../apps/backend
+    image: cloudshop/backend:1.0.0
+    ports:
+      - "3001:3000"
+    env_file:
+      - .env
+    restart: unless-stopped
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_started
+    networks:
+      - cloudshop-network
+
+  mysql:
+    container_name: cloudshop-mysql
+    image: mysql:8.4
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks:
+      - cloudshop-network
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  redis:
+    container_name: cloudshop-redis
+    image: redis:7.4-alpine
+    restart: unless-stopped
+    ports:
+      - "6380:6379"
+    command: redis-server --appendonly yes
+    volumes:
+      - redis-data:/data
+    networks:
+      - cloudshop-network
+
+networks:
+  cloudshop-network:
+    driver: bridge
+
+volumes:
+  mysql-data:
+  redis-data:
